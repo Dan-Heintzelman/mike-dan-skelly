@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hacker Blues</title>
+<!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  </head>
+<body>
+  <div class="container">
+  <header>
+
+        <% if logged_in? %>
+          <ul class="left">
+            <li><h3><a href="/">Your Cruddy Title</a></h3></li>
+            <li><a href="/users/<%= current_user.id %>">  <%= current_user.username %> </a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+        <% else %>
+          <ul class="left">
+            <li><h3><a href="/">Your Cruddy Title</h3></a></li>
+            <li>Welcome</li>
+            <li><a href="/users/new">Register</a></li>
+          </ul>
+          <ul class="right">
+            <li><a href="/session/new">Login</a></li>
+          </ul>
+
+        <% end %>
+
+
+  </header>
+    <%= yield %>
+  </div>
+</body>
+</html>

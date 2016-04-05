@@ -1,0 +1,15 @@
+<h3>Create a new account!</h3>
+<form method="post" action="/users">
+	<label for="">Create New Account</label>
+	<input type="text" name="username" placeholder="Choose a username">
+	<input type="password" name="password" placeholder="Choose a password">
+  <input type="submit" value= "Create account">
+</form>
+
+<% if @errors %>
+  <ul class="error_message">
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+<% end %>

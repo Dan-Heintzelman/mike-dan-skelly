@@ -1,0 +1,95 @@
+/*********  MEDIA QUERY  ************/
+
+html {
+  box-sizing: border-box;
+}
+
+.container {
+	background-color: #F6F6EF;
+  margin: auto;
+  border: 2px solid lightgrey;
+  margin-top: 0px;
+
+}
+
+
+@media (max-width: 750px)	{
+
+.container {
+	width: 100%;
+
+}
+}
+
+@media (min-width: 751px)	{
+
+.container {
+	width: 90%;
+
+}
+
+
+}
+
+
+
+/************** HEADER CSS ***************/
+
+header {
+	height: 50px;
+	background-color: #5588EE;
+  box-shadow: 2px 2px 2px darkgrey;
+
+}
+
+header  h3 {
+  margin: 0px;
+  line-height: 50px;
+}
+
+ul {
+  margin: 0px 0px;
+}
+
+
+header  li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.left {
+/*display:inline-block;*/
+float: left;
+}
+
+.right {
+
+float: right;
+line-height: 50px;
+/*display:inline-block;*/
+}
+
+header li > a:link {
+  text-decoration: none;
+  color: white;
+}
+header li > a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+
+header li > a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+header h3 a:link, h3 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+

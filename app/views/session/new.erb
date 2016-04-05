@@ -1,0 +1,15 @@
+<h3>Login to your account!</h3>
+<form method="POST" action="/session">
+  <label for="">Credentials:</label>
+  <input type="text" name="username" placeholder="Enter username">
+  <input type="password" name="password" placeholder="Enter password">
+  <input type="submit" value= "Login">
+</form>
+
+<% if @error %>
+  <ul class="error_message">
+
+    <li><%= @error %></li>
+
+  </ul>
+<% end %>
